@@ -67,7 +67,7 @@ public class StockPriceProfitCalculatorTests {
     }
 
     @Test
-    public void shouldReturnNonProfitTradeWhenStockPriceDataBroken() {
+    public void shouldThrowNullPointerExceptionWhenStockPriceDataHasNull() {
         List<String> stockPricesYesterday = Arrays.asList("2.3", null, "2");
         try {
             StockPriceProfitCalculator.convertPriceListToBigDecimalArray(stockPricesYesterday);
