@@ -1,13 +1,13 @@
 # Application Description
 
-###Suppose we could access yesterday’s stock prices as a list, where:
+### Suppose we could access yesterday’s stock prices as a list, where:
 
 * The indices are the time in minutes past trade opening time, which was 10:00am local time.
 * The values are the price in dollars of the Latitude Financial stock at that time.
 * So if the stock cost $5 at 11:00am, stock_prices_yesterday[60] = 5.
 * You must buy before you sell. You may not buy and sell in the same time step (at least 1 minute must pass).
 
-###For example:
+### For example:
 
 Given stock price as below 
 
@@ -26,24 +26,26 @@ The application will give the below detail trade transaction that demonstrates h
 ### Running on local (develop mode, Review code by IDE intellij or VSCode IDE ) 
 * Clone repository from GitHub 
 ```
-$git clone https://github.com/Wei-Tao-2013/stock-trade-service.git
+git clone https://github.com/Wei-Tao-2013/stock-trade-service.git
 ``` 
 * Check local Java version in terminal, make sure java version is 11, otherwise set JAVA_HOME to JAVA 11. 
 ``` 
-$ java -version
+java -version
 ```  
 * Build the project
 ```
-$cd stock-trade-service
-$./mvnw clean package
+cd stock-trade-service
+```
+```
+./mvnw clean package
 ```  
 * Run unit tests
 ```
-$./mvnw -Dtest=StockPriceProfitCalculatorTests test
+./mvnw -Dtest=StockPriceProfitCalculatorTests test
 ```
 * Run the app
 ```
-$java -jar target/stock-trade-service-1.0.jar
+java -jar target/stock-trade-service-1.0.jar
 ```
 ###There are 5 scenarios demonstrated the use cases in terminal
 
@@ -54,11 +56,12 @@ $java -jar target/stock-trade-service-1.0.jar
 * Login jfrog as guest
 
 ```
-$docker login webox.jfrog.io
+docker login webox.jfrog.io
 ```
 * enter username and password as below
 
 username:guest
+
 password:#@5stock!Trade
 
 * run docker image
