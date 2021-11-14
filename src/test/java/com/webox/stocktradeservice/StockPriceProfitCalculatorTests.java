@@ -56,10 +56,10 @@ public class StockPriceProfitCalculatorTests {
     }
 
     @Test
-    public void shouldReturnNonProfitTradeWhenStockPriceDataHasNonDigitalNumber() {
+    public void shouldThrowNumberFromatExceptionWhenStockPriceDataHasNonDigitalNumber() {
         List<String> stockPricesYesterday = Arrays.asList("2.3", "non-number", "2");
         try {
-            StockPriceProfitCalculator.convertPriceListToBigDecimalArray(stockPricesYesterday);
+            stockPriceProfitCalculator.getMaxProfitTradeInfo(stockPricesYesterday);
         } catch (IllegalArgumentException e) {
             assertEquals(e.getMessage(), "NumberFormatException");
         }
@@ -70,7 +70,7 @@ public class StockPriceProfitCalculatorTests {
     public void shouldThrowNullPointerExceptionWhenStockPriceDataHasNull() {
         List<String> stockPricesYesterday = Arrays.asList("2.3", null, "2");
         try {
-            StockPriceProfitCalculator.convertPriceListToBigDecimalArray(stockPricesYesterday);
+            stockPriceProfitCalculator.getMaxProfitTradeInfo(stockPricesYesterday);
         } catch (IllegalArgumentException e) {
             assertEquals(e.getMessage(), "NullPointerException");
         }

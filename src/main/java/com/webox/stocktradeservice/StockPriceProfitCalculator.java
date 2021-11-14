@@ -82,7 +82,7 @@ public class StockPriceProfitCalculator {
         return index;
     }
 
-    public static BigDecimal[] convertPriceListToBigDecimalArray(List<String> stockPriceList) {
+    private BigDecimal[] convertPriceListToBigDecimalArray(List<String> stockPriceList) {
         if (stockPriceList == null) {
             raiseError("Stock info can't be null.");
         }
