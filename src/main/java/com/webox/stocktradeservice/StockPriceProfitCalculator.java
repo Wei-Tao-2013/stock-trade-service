@@ -70,8 +70,7 @@ public class StockPriceProfitCalculator {
         return maxSum;
     }
 
-    // find the index in array by value, here is for searching the when the stock
-    // should be bought for maximum profit
+    // find the index in array by value (stock price)
     private static int findIndex(BigDecimal[] arr, BigDecimal t) {
         int index = -1;
         for (int i = 0; i < arr.length - 1; i++) {
