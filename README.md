@@ -60,12 +60,20 @@ docker login webox.jfrog.io
 ```
 * enter username and password as below
 
-username:guest
-
-password:#@5stock!Trade
-
+username:
+```
+guest
+```
+password:
+```
+#@5stock!Trade
+```
 * run docker image
 
 ```
 docker run webox.jfrog.io/default-docker-local/stock-trade:1.0.1
+```
+* docker logout
+```
+docker logout webox.jfrog.io
 ```
