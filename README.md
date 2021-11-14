@@ -47,7 +47,7 @@ cd stock-trade-service
 ```
 java -jar target/stock-trade-service-1.0.jar
 ```
-###There are 5 scenarios demonstrated the use cases in terminal
+### There are 5 scenarios demonstrated the use cases in terminal
 
   ![description](app-screen-shot.jpg?raw=true)
 
